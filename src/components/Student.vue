@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Student amb id</h1>
-    <h2>{{ $route.params.id }}</h2>
+    <h1>Student amb email: </h1>
+    <h2>{{ $route.params.email }}</h2>
   </div>
 </template>
 

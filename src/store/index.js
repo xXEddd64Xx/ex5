@@ -6,26 +6,25 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     llista:[],
-    emails:[],
-    userLogged: String
+    userLogged: ""
   },
   getters: {
     getLlista: state => {
       return state.llista;
+    },
+    getBool: state => {
+      return state.bool;
     },
     getUserLogged: state => {
       return state.userLogged;
     }
   },
   mutations: {
-    buscarEmail(state, email) {
+    logIn(state, EmailPass) {
       for (let i = 0; i < state.llista.length; i++) {
-        state.emails.push(state.llista[i].email)
+        console.log(state.llista);
+        if(state.llista[i].email == EmailPass.email && state.llista[i].pwd == EmailPass.pass) { state.userLogged = EmailPass.email; }
       }
-      if (state.emails.includes(email)) {  
-        alert("Entra");
-        return true;
-      } else { alert("no entra") ;return false; }
     },
     afegeixElement:function(state, element){
       state.llista.push(element);
@@ -34,11 +33,6 @@ export default new Vuex.Store({
       /* let posicio = state.llista.indexOf(element); */
       state.llista.splice(pos, 1);
     },
-    setUserLogged:function(state, lUserLogged) {
-      console.log(lUserLogged);
-      console.log(state.llista);
-      state.userLogged = lUserLogged;
-    }
   },
   actions: {
   },

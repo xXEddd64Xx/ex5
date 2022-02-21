@@ -8,10 +8,9 @@
 export default {
   name: 'Person',
   props: {
-    name: String,
-    email: String,
-    pwd: String,
-    dni: String
+    name: "",
+    email: "",
+    pwd: ""
   },
   methods: {
     
