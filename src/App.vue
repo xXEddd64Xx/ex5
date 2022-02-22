@@ -5,10 +5,11 @@
       &nbsp;-&nbsp;
       <router-link to="/register">Register</router-link>
       &nbsp;-&nbsp;
-      <router-link :to="{
+      <router-link v-if="this.$store.getters.getUserLogged != null" :to="{
         name: 'student', 
         params: {email: this.$store.getters.getUserLogged}
       }">Student</router-link>
+      <router-link v-else to="/student">Student</router-link>
       &nbsp;-&nbsp;
       <router-link to="/">Home</router-link>
     </div>
