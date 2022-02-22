@@ -5,7 +5,10 @@
       &nbsp;-&nbsp;
       <router-link to="/register">Register</router-link>
       &nbsp;-&nbsp;
-      <router-link to="'/student'+this.$store.getters.getUserLogged">Student</router-link>
+      <router-link :to="{
+        name: 'student', 
+        params: {email: this.$store.getters.getUserLogged}
+      }">Student</router-link>
       &nbsp;-&nbsp;
       <router-link to="/">Home</router-link>
     </div>

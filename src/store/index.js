@@ -29,10 +29,6 @@ export default new Vuex.Store({
     afegeixElement:function(state, element){
       state.llista.push(element);
     },
-    eliminarElement:function(state, pos){
-      /* let posicio = state.llista.indexOf(element); */
-      state.llista.splice(pos, 1);
-    },
   },
   actions: {
   },

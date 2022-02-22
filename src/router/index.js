@@ -11,10 +11,10 @@ let router = new VueRouter({
   base: "/",
   mode: "history",
   routes: [
-    { path: "/", component: home },
-    { path: "/login", component: login },
-    { path: "/register", component: register },
-    { path: "/student/:email", component: student }
+    { path: "/", component: home, name: 'home' },
+    { path: "/login", component: login, name: 'login' },
+    { path: "/register", component: register, name: 'register' },
+    { path: "/student/:email", component: student, name: 'student' }
   ]
 });
 
