@@ -7,10 +7,12 @@
 <script>
 export default {
   name: 'Person',
-  props: {
-    name: "",
-    email: "",
-    pwd: ""
+  data() {
+    return {
+      name: "",
+      email: "",
+      pwd: ""
+    }
   },
   methods: {
     

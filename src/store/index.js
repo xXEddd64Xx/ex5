@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     llista:[],
-    userLogged: ""
+    userLogged: null
   },
   getters: {
     getLlista: state => {
